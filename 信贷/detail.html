@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>详情页</title>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="小额信贷" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link rel="stylesheet" type="text/css" href="css/detail.css" />
+		<script>
+			document.getElementsByTagName('html')[0].style.fontSize = (document.documentElement.clientWidth < 750) ? (document.documentElement.clientWidth / 7.50 + "px") : "100px";
+		</script>
+	</head>
+
+	<body ontouchstart class="detail-page">
+
+		<div class="detail-part1 mb-dark">
+			<div class="part1-top flex-box">
+				<div class="item-img vertical">
+					<img src="img/img-1.png" />
+				</div>
+				<div class="item-ctn">
+					<p>平安车抵贷-车抵贷-押证（等额）</p>
+					<span class="notice">押证或押车</span>
+				</div>
+				<div class="item-rt star">
+					<i class="icon-star"></i>
+				</div>
+			</div>
+
+			<div class="part1-ctn">
+				<div class="range-box">
+					<label for="">
+						<span>金额</span>
+						<div class="ipt-box">
+							<input type="number" value="1">
+							<span>万</span>
+						</div>
+					</label>
+
+					<label for="">
+						<span>期限</span>
+						<div class="ipt-box">
+							<input type="text" value="三个月">
+							<span><img src="img/icon-arrow-sm.png" alt="" /></span>
+						</div>
+					</label>
+				</div>
+
+				<div class="range-text">
+					<span>额度范围：1万-8万</span>
+					<span>期限范围：3个月-36个月</span>
+				</div>
+
+				<div class="range-pic flex-box">
+					<div class="circle-box">
+						<div class="circle-ctn">
+							<p>总费用0.03万</p>
+							<p>月供3432.33元</p>
+						</div>
+					</div>
+					<div class="pic-rt">
+						<p>贷 款 <span>1万/3个月</span></p>
+						<p>利 息 <span>297元（0.99%/月）</span></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="part1-btm vertical">
+
+				<div class="accor-more">
+					<p>利率说明</p>
+					<div class="accor-info flex-box">
+						<div class="info-1">
+							<p>贷款期限（月）</p>
+							<p>3个月-36个月</p>
+						</div>
+						<div class="info-1">
+							<p>利息（月）</p>
+							<p>0.99%</p>
+						</div>
+					</div>
+					<p>提前还款</p>
+					<div>可提前还款，违约金为贷款剩余本金的3%</div>
+					<p>几种费用有什么区别</p>
+					<div>无</div>
+				</div>
+
+				<p class="accor"><i></i></p>
+			</div>
+
+		</div>
+
+		<div class="detail-part2 mb-dark">
+			<section>
+				<p class="part-title">办理流程</p>
+				<img src="img/process.png" class="process" />
+			</section>
+
+			<section>
+				<p class="part-title">申请条件</p>
+				<ul class="cond-info">
+					<li>7年内，12万公里</li>
+					<li>现值6.2万以上 </li>
+					<li>持车满3个月，证在手无抵押 </li>
+					<li>新车，二手车，小贷或个人过户满3个月</li>
+				</ul>
+			</section>
+
+		</div>
+
+		<div class="detail-part2 mb-dark">
+			<section>
+				<p class="part-title">申请材料</p>
+				<ul class="cond-info">
+					<li>身份证</li>
+					<li>工作证明 </li>
+					<li>半年代发流水，社保明细或公积金明细 </li>
+					<li>行驶证</li>
+					<li>房产证明</li>
+				</ul>
+			</section>
+
+		</div>
+
+		<div class="detail-part2">
+			<section>
+				<p class="part-title">信息补充</p>
+				<ul class="cond-info">
+					<li>特色：一次抵押，5年循环授信使用</li>
+				</ul>
+
+				<div class="save-box flex-box">
+					<span>保存二维码</span>
+					<a href="" class="btn-save">点击保存</a>
+				</div>
+			</section>
+
+		</div>
+
+		<script src="js/jquery.min.js"></script>
+		<script>
+			$(function() {
+
+				/* 点击切换 是否收藏 */
+				$('.item-rt').click(function() {
+					$(this).toggleClass('star');
+				});
+
+				/* 点击切换是否展开 */
+				$('.accor').click(function() {
+					var that = this;
+					$(that).toggleClass(function(index, oldclass) {
+						if(oldclass.match("on")) {
+							$(".accor-more").slideUp();
+						} else {
+							$(".accor-more").slideDown();
+						}
+						return "on";
+					});
+				})
+			})
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,312 @@
+@charset "utf-8";
+
+.mb-dark:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: .2rem;
+    background: #ccc;
+}
+
+.part1-top{
+    width: 6.8rem;
+    height: 1.62rem;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.item-img {
+    text-align: center;
+    width: 1.24rem;
+    height: 1.24rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: .1rem;
+    img {
+        max-width: 1.2rem;
+        height: auto;
+    }
+}
+
+
+.item-ctn {
+    width: 4.2rem;
+    font-size: .28rem;
+    color: #1c1e20;
+    >p {
+        line-height: .32rem;
+        margin-bottom: .2rem;
+        max-height: .64rem;
+        overflow: hidden;
+    }
+    .notice{
+        padding: 0 .2rem;
+        height: .4rem;
+        line-height: .38rem;
+        border: 1px solid #5ccde5;
+        border-radius: 4px;
+        color: #5ccde5;
+        text-align: center;
+    }
+}
+
+.item-rt{
+    width: 1.15rem;
+    &:after{
+        content: '收藏';
+        display: block;
+        width: 100%;
+        font-size: .22rem;
+        color: #b1b1b1;
+        text-align: center;
+    }
+    &.star:after{
+        content: '取消收藏';
+        display: block;
+        width: 100%;
+        font-size: .22rem;
+        color: #ffbb82;
+        text-align: center;
+    }
+    
+    &.star i{
+        background: url(../img/star-big1.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    
+    i{
+        display: block;
+        width: .54rem;
+        height: .54rem;
+        margin: 0 auto .1rem;
+        background: url(../img/star-big.png) no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.part1-ctn{
+    width: 6.8rem;
+    margin: 0 auto;
+}
+
+.range-box {
+    
+    label{
+        font-size: .24rem;
+        color: #1c1e20;
+        margin-right: .5rem;
+    }
+    
+    .ipt-box {
+        position: relative;
+        display: inline-block;
+        width: 1.8rem;
+        height: .4rem;
+        margin-left: .2rem;
+        border: 1px solid #ccc;
+        border-radius: .2rem;
+        input {
+            margin-left: .2rem;
+            width: 1.1rem;
+            height: .36rem;
+            padding: 0 .2rem;
+            border: none;
+            outline: none;
+            font-size: .24rem;
+            color: #ffbb82;
+            text-align: center;
+        }
+        span {
+            position: absolute;
+            right: .1rem;
+            top: .02rem;
+            img{
+                margin-top: .02rem;
+                width: .26rem;
+                height: .26rem;
+            }
+        }
+    }
+}
+
+.range-text{
+    font-size: .22rem;
+    color: #adadad;
+    padding: .4rem 0;
+    span:first-child{
+        margin-right: 1rem;
+    }
+}
+
+.range-pic{
+    -webkit-align-items: center;
+    align-items: center;
+    font-size: .22rem;
+    color: #909090;
+    margin-bottom: .5rem;
+}
+
+.circle-box{
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: .06rem;
+    margin-right: .7rem;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    
+}
+
+.circle-ctn{
+    width: 100%;
+    height: 100%;
+    border: .16rem solid #FFBB82;
+    border-radius: 50%;
+    
+    p:first-child{
+        margin-bottom: .1rem;
+        margin-top: .55rem;
+    }
+}
+
+.pic-rt{
+    p:first-child{
+        margin-bottom: .35rem;
+    }
+    p:before{
+        content: '';
+        display: inline-block;
+        width: .1rem;
+        height: .1rem;
+        background: #ccc;
+        border-radius: 50%;
+        margin-right: .12rem;
+    }
+    p:first-child:before{
+        content: '';
+        background: #5CCDE5;
+    }
+}
+
+.part1-btm{
+    .accor{
+        width: 100%;
+        margin: .2rem 0;
+        font-size: .22rem;
+        color: #acacac;
+        text-align: center;
+        i{
+            display: inline-block;
+            width: .32rem;
+            height: .17rem;
+            margin-left: .1rem;
+            transform: rotateX(180deg);
+            background: url(../img/icon-triangle.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        
+        &:before{
+            content: '费用详情';
+        }
+        
+        &.on{
+            i{
+                transform: rotateX(0);
+            }
+            &:before{
+                content: '收起';
+            }
+        }
+    }
+}
+
+.accor-more{
+    display: none;
+    font-size: .24rem;
+    padding-left: .5rem;
+    >p{
+        color: #202224;
+        line-height: .88rem;
+    }
+    
+    > div{
+        font-size: .22rem;
+        color: #acacac;
+    }
+}
+
+.info-1{
+    margin-right: .3rem;
+    text-align: center;
+    p:first-child{
+        font-size: .24rem;
+        color: #202224;
+        margin-bottom: .15rem;
+        &:before{
+            content: '';
+            display: inline-block;
+            width: .1rem;
+            height: .3rem;
+            border-radius: .05rem;
+            background: #FFBB82;
+            margin-right: .1rem;
+            vertical-align: middle;
+        }
+    }
+}
+
+.part-title{
+    padding-left: .5rem;
+    line-height: .95rem;
+    border-bottom: 1px solid #ccc;
+    font-size: .24rem;
+    color: #202224;
+}
+
+.process{
+    display: block;
+    margin: .2rem auto .6rem;
+    width: 6rem;
+    height: auto;
+}
+
+.cond-info{
+    margin: .3rem 0;
+    padding-left: .72rem;
+    color: #acacac;
+    font-size: .22rem;
+    line-height: .36rem;
+    
+    li{
+        list-style: decimal;
+    }
+}
+
+.save-box{
+    margin: .4rem 0;
+    padding: 0 .5rem;
+    font-size: .24rem;
+    color: #202224;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+}
+
+.btn-save{
+    color: #ffbb82;
+    &:before{
+        content: '';
+        display: inline-block;
+        width: .24rem;
+        height: .24rem;
+        background: url(../img/wecode.png) no-repeat;
+        background-size: 100% 100%;
+        margin-right: .1rem;
+        vertical-align: middle;
+    }
+}
+
